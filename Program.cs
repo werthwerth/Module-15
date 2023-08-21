@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json.Nodes;
 
 namespace Task1
 {
@@ -21,7 +22,7 @@ namespace Task1
 
         static string[] GetAllStudents(Classroom[] classes)
         {
-            // ???
+            return classes.SelectMany(classes => classes.Students).ToArray();
         }
 
         public class Classroom
